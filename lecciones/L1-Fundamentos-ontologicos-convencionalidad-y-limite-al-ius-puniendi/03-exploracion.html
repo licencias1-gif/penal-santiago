@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L1 — Exploración</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L1</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html" class="active">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">Elemento 3 — Exploración</span>
+    <h1>Dilemas: legalidad estricta, bloque y estándares internacionales</h1>
+    <p class="sub">Introducción breve: explorar posturas sin sustituir el análisis del caso concreto.</p>
+    <p class="lead">
+      La exploración confronta tres tensiones recurrentes: (1) <strong>tipicidad estricta</strong> frente a integración de categorías de Derecho Internacional;
+      (2) <strong>seguridad jurídica</strong> frente a exigencias de no impunidad en graves violaciones; (3) <strong>coordinación procesal</strong>
+      (<em>ne bis in idem</em>, competencia) frente a subsunción sustantiva única. Cada microcaso pide una <em>primera</em> línea argumentativa y
+      devuelve criterios de autocorrección.
+    </p>
+
+    <div class="explore-shell" id="exploreL1">
+      <p class="sr-only" id="exploreL1-desc">Navegación por escenas: use las pestañas y luego las fichas para elegir postura. La retroalimentación aparece bajo el botón.</p>
+      <div class="explore-rail" role="tablist" aria-label="Escenas de exploración">
+        <button type="button" role="tab" id="tab-m1" aria-controls="panel-m1" aria-selected="true" data-explore-target="m1">Microcaso 1</button>
+        <button type="button" role="tab" id="tab-m2" aria-controls="panel-m2" aria-selected="false" data-explore-target="m2">Microcaso 2</button>
+        <button type="button" role="tab" id="tab-m3" aria-controls="panel-m3" aria-selected="false" data-explore-target="m3">Microcaso 3</button>
+        <button type="button" role="tab" id="tab-postura" aria-controls="panel-postura" aria-selected="false" data-explore-target="postura">Postura global</button>
+        <button type="button" role="tab" id="tab-tabla" aria-controls="panel-tabla" aria-selected="false" data-explore-target="tabla">Tabla de tensión</button>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-m1" aria-labelledby="tab-m1">
+        <section class="card">
+          <h2 class="sec">Microcaso 1 — Tipo interno vs. categoría internacional</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Hechos del microcaso">
+              <p class="explore-facts-label">Escena</p>
+              <p>
+                Hechos sintéticos: investigación por homicidio agravado; la Fiscalía insinúa encuadre como crimen de lesa humanidad ante posible participación
+                en patrón sistemático. La defensa invoca <em>lex praevia</em> y ausencia de tipificación expresa de “crimen de lesa humanidad” en el momento relevante.
+              </p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="tab-m1">
+                <label class="explore-tile">
+                  <input type="radio" name="m1" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> Cerrar el debate en el tipo penal interno vigente; no admitir categoría internacional en primera instancia.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m1" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> Admitir integración inmediata de categoría internacional aunque el tipo interno sea distinto.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m1" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> Separar: primero competencia y temporalidad; luego, si procede, subsidiariamente armonizar con DIH.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="m1btn">Retroalimentación</button>
+              </div>
+              <div id="m1fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-m2" aria-labelledby="tab-m2" hidden>
+        <section class="card">
+          <h2 class="sec">Microcaso 2 — Interpretación extensiva del verbo típico</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Hechos del microcaso">
+              <p class="explore-facts-label">Escena</p>
+              <p>
+                El tipo usa un verbo de amplia extensión semántica en la práctica forense. El juez tiende a equiparar dos conductas por “equivalencia social”
+                sin norma aclaratoria. La defensa alega <em>lex stricta</em>.
+              </p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="tab-m2">
+                <label class="explore-tile">
+                  <input type="radio" name="m2" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> Apoyar la equiparación si protege el bien jurídico.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m2" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> Exigir que toda ampliación relevante provenga del legislador o de criterios de unificación vinculantes.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m2" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> Proponer interpretación teleológica acusatoria sin límites textuales.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="m2btn">Retroalimentación</button>
+              </div>
+              <div id="m2fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-m3" aria-labelledby="tab-m3" hidden>
+        <section class="card">
+          <h2 class="sec">Microcaso 3 — Tratado y bloque ante juez penal</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Hechos del microcaso">
+              <p class="explore-facts-label">Escena</p>
+              <p>
+                La defensa cita un fallo de la Corte IDH y pide inaplicar una norma interna. El juez penal duda de su alcance tras la línea de C-146/21 sobre
+                el papel de la jurisprudencia interamericana y la supremacía constitucional.
+              </p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="tab-m3">
+                <label class="explore-tile">
+                  <input type="radio" name="m3" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> Solicitar inaplicación automática de la norma interna.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m3" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> Articular interpretación conforme: mostrar colisión, vía procesal idónea y estándar del bloque interno.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="m3" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> Ignorar el tratado por ser “externo” al proceso penal.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="m3btn">Retroalimentación</button>
+              </div>
+              <div id="m3fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-postura" aria-labelledby="tab-postura" hidden>
+        <section class="card">
+          <h2 class="sec">Simulador global de postura (macro)</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Instrucción">
+              <p class="explore-facts-label">Mapa</p>
+              <p>Elija la línea que defendería como estrategia general (autoevaluación). Luego pulse el botón para ver la guía de argumentos.</p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem">Estrategia</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="tab-postura">
+                <label class="explore-tile">
+                  <input type="radio" name="postura" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> Prioridad absoluta a legalidad estricta y límites interpretativos.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="postura" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> Prioridad a estándares internacionales cuando el orden interno genera impunidad frente a graves violaciones.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="postura" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> Estrategia dual: competencia, temporalidad y <em>ne bis in idem</em> primero; integración subsidiaria.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="simBtn">Ver guía de argumentos</button>
+              </div>
+              <div id="simFb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-tabla" aria-labelledby="tab-tabla" hidden>
+        <section class="card">
+          <h2 class="sec">Tabla de tensión (refuerzo)</h2>
+          <table class="explore-glow">
+            <thead>
+              <tr><th>Variable</th><th>Riesgo si se privilegia solo un polo</th><th>Contrapeso dogmático</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Legalidad estricta</td><td>Formalismo que obstruye protección efectiva de víctimas en macro-crimen</td><td>Reserva de ley, tipicidad, inocencia</td></tr>
+              <tr><td>Integración internacional</td><td>Inseguridad jurídica y choque con texto interno sin canal procesal</td><td>Bloque, armonización, vías expresas</td></tr>
+              <tr><td>Proporcionalidad de la intervención</td><td>Sobrepunitivismo o subprotección según el sesgo institucional</td><td>Dignidad humana, fines constitucionales de la pena</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Temario L1 (Exploración). Bernal, Cap. 4 (principios rectores, bloque, legalidad). Sentencia C-146/21 (papel hermenéutico de Corte IDH y bloque).
+    </blockquote>
+    <p><a href="04-contexto.html" class="btn">Siguiente: Contexto →</a></p>
+  </main>
+  <script>
+    (function () {
+      var shell = document.getElementById('exploreL1');
+      if (!shell) return;
+      var tabs = shell.querySelectorAll('.explore-rail [role="tab"]');
+      var panels = {
+        m1: document.getElementById('panel-m1'),
+        m2: document.getElementById('panel-m2'),
+        m3: document.getElementById('panel-m3'),
+        postura: document.getElementById('panel-postura'),
+        tabla: document.getElementById('panel-tabla')
+      };
+      function showPanel(key) {
+        Object.keys(panels).forEach(function (k) {
+          var p = panels[k];
+          if (!p) return;
+          var on = k === key;
+          p.hidden = !on;
+          p.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+        tabs.forEach(function (t) {
+          var sel = t.getAttribute('data-explore-target') === key;
+          t.setAttribute('aria-selected', sel ? 'true' : 'false');
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          showPanel(t.getAttribute('data-explore-target'));
+        });
+      });
+    })();
+
+    function pick(name) {
+      var r = document.querySelector('input[name="' + name + '"]:checked');
+      return r ? r.value : null;
+    }
+    document.getElementById('m1btn').onclick = function () {
+      var v = pick('m1');
+      var el = document.getElementById('m1fb');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      el.className = 'feedback show ' + (v === 'c' ? 'ok' : 'no');
+      el.textContent =
+        v === 'c'
+          ? 'Coherente: separar competencia y temporalidad reduce el riesgo de vulnerar lex praevia y permite integrar DIH solo si el orden procesal y sustantivo lo admite de modo fundado.'
+          : v === 'a'
+            ? 'Parcialmente defendible, pero puede quedar corto si existen obligaciones internas de investigación/sanción ya incorporadas al bloque; conviene explicitar por qué no opera integración en ese supuesto.'
+            : 'Arriesgado: la integración inmediata sin anclaje en tipo y temporalidad puede chocar con legalidad estricta; fundamente vía procesal y parámetro aplicable.';
+    };
+    document.getElementById('m2btn').onclick = function () {
+      var v = pick('m2');
+      var el = document.getElementById('m2fb');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      el.className = 'feedback show ' + (v === 'b' ? 'ok' : 'no');
+      el.textContent =
+        v === 'b'
+          ? 'Alineado con lex stricta: la expansión judicial grave del verbo típico exige especial cautela; la vía legislativa o criterios unificadores reduce arbitrariedad.'
+          : v === 'a'
+            ? 'La protección del bien jurídico no autoriza por sí sola analogías o equivalencias que agraven; debe compatibilizarse con certeza y favorabilidad.'
+            : 'La teleología acusatoria sin ancla textual erosiona lex certa; es la postura más expuesta a revisión en segunda instancia o casación.';
+    };
+    document.getElementById('m3btn').onclick = function () {
+      var v = pick('m3');
+      var el = document.getElementById('m3fb');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      el.className = 'feedback show ' + (v === 'b' ? 'ok' : 'no');
+      el.textContent =
+        v === 'b'
+          ? 'Correcto en clave C-146/21: la jurisprudencia IDH informa la interpretación del bloque; la inaplicación automática no es el estándar genérico del juez penal sin encadenar colisión, bloque y remedio procesal.'
+          : v === 'a'
+            ? 'La inaplicación automática confunde control convencional difuso con el estándar que la Corte Constitucional ha delimitado; fundamente con mayor matices o vía constitucional específica.'
+            : 'Incorrecto: los tratados incorporados forman parte del parámetro interpretativo; ignorarlos puede generar déficit de protección y error jurídico.';
+    };
+    document.getElementById('simBtn').onclick = function () {
+      var v = pick('postura');
+      var el = document.getElementById('simFb');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      var map = {
+        a: 'Eje garantista: articule tipicidad, lex stricta y debido proceso; prepare respuesta a la acusación de “impunidad material” con datos probatorios y estándar de carga, no solo con retórica.',
+        b: 'Eje integrador: deberá anclar cada paso en fuentes del bloque y en competencia/temporalidad válidas; evite saltos desde etiqueta internacional a condena sin subsumición en orden interno.',
+        c: 'Eje dual: útil en litigios complejos; documente cada “capa” (competencia, idempotencia sustantiva, fuentes aplicables) para que el tribunal siga el hilo sin confundir niveles.'
+      };
+      el.className = 'feedback show ok';
+      el.textContent = map[v];
+    };
+  </script>
+</body>
+</html>

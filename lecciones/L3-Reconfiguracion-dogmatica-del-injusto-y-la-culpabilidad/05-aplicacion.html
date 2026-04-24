@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L3 — Aplicación</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L3</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html" class="active">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L3 — Elemento 5 — Aplicación</span>
+    <h1>Clínica: alegato sobre ausencia de culpabilidad / error</h1>
+    <p class="lead">
+      Estructura: (1) hechos probados sobre conocimiento y voluntad; (2) estándar del tipo subjetivo; (3) narración del error o exclusión de imputabilidad;
+      (4) petitorio de absolución o reconducción típica.
+    </p>
+
+    <section class="card">
+      <h2 class="sec">Tesis modelo</h2>
+      <ol style="font-size:0.9rem;line-height:1.5">
+        <li>La fiscalía no probó más allá de duda razonable el elemento subjetivo exigido por el tipo (indicar artículo).</li>
+        <li>Subsiste un <strong>error de tipo / prohibición</strong> vencible o invencible que excluye o modula el dolo según el caso.</li>
+        <li>La sentencia incurrió en <em>error in iudicando</em> al inferir dolo desde la gravedad objetiva del resultado.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <textarea id="t1" placeholder="Describa el estándar subjetivo del tipo aplicable"></textarea>
+      <textarea id="t2" style="margin-top:0.5rem" placeholder="Liste pruebas que fallan para acreditar dolo o culpa"></textarea>
+      <button type="button" class="btn" id="chk">Verificar</button>
+      <div id="fb" class="feedback"></div>
+    </section>
+
+    <blockquote class="src"><strong>Fuentes:</strong> Bernal, Cap. 4; C.P. y ley procesal aplicable.</blockquote>
+    <p><a href="06-prospectiva.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    document.getElementById('chk').onclick = function () {
+      var el = document.getElementById('fb');
+      if (document.getElementById('t1').value.trim().length < 25 || document.getElementById('t2').value.trim().length < 25) {
+        el.className = 'feedback show no';
+        el.textContent = 'Detalle el estándar del tipo y las lagunas probatorias con mayor precisión.';
+        return;
+      }
+      el.className = 'feedback show ok';
+      el.textContent = 'Base lista para integrar en alegatos de conclusión o apelación.';
+    };
+  </script>
+</body>
+</html>

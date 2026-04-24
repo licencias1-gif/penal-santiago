@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L4 — Exploración</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L4</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html" class="active">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L4 — Elemento 3 — Exploración</span>
+    <h1>Elegir línea procesal bajo incertidumbre</h1>
+    <p class="lead">Tres microcasos; la “mejor” respuesta depende de la línea institucional que adopte su curso o su cliente.</p>
+
+    <div class="explore-shell" id="exploreL4">
+      <p class="sr-only" id="exploreL4-desc">Tres escenas en pestañas; en cada una elija una ficha y pulse retroalimentación.</p>
+      <div class="explore-rail" role="tablist" aria-label="Microcasos">
+        <button type="button" role="tab" id="tab-l4-a" aria-controls="panel-l4-a" aria-selected="true" data-explore-target="a">Caso A</button>
+        <button type="button" role="tab" id="tab-l4-b" aria-controls="panel-l4-b" aria-selected="false" data-explore-target="b">Caso B</button>
+        <button type="button" role="tab" id="tab-l4-c" aria-controls="panel-l4-c" aria-selected="false" data-explore-target="c">Caso C</button>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l4-a" aria-labelledby="tab-l4-a">
+        <section class="card">
+          <h2 class="sec">Caso A — Hurto de mínima cuantía</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Planteamiento">
+              <p class="explore-facts-label">Planteamiento</p>
+              <p style="font-size:0.88rem;margin:0">Defensa pide cierre temprano por insignificancia. ¿Invoca primero atipicidad (4) o antijuridicidad (6)?</p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem" id="l4-a-label">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="l4-a-label">
+                <label class="explore-tile">
+                  <input type="radio" name="a" value="x" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">1</span> Solo causal 4</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="a" value="y" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">2</span> Solo causal 6</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="a" value="z" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">3</span> Estrategia dual con subsidiariedad en el escrito</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="ba">Retroalimentación</button>
+              </div>
+              <div id="fa" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l4-b" aria-labelledby="tab-l4-b" hidden>
+        <section class="card">
+          <h2 class="sec">Caso B — Dolo con consecuencia catastrófica para el autor</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Planteamiento">
+              <p class="explore-facts-label">Planteamiento</p>
+              <p style="font-size:0.88rem;margin:0">¿Solicitaría art. 34 en delito doloso?</p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem" id="l4-b-label">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="l4-b-label">
+                <label class="explore-tile">
+                  <input type="radio" name="b" value="x" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">1</span> Sí, por analogía in bonam partem</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="b" value="y" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">2</span> No, reservado a culpa según práctica dominante</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="b" value="z" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">3</span> Subsidiariamente, con dictamen pericial del daño al autor</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="bb">Retroalimentación</button>
+              </div>
+              <div id="fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l4-c" aria-labelledby="tab-l4-c" hidden>
+        <section class="card">
+          <h2 class="sec">Caso C — Imputación simultánea CP + lesa humanidad</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Caso C — Imputación simultánea CP + lesa humanidad">
+              <p class="explore-facts-label">Caso</p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem" id="l4-c-label">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="l4-c-label">
+                <label class="explore-tile">
+                  <input type="radio" name="c" value="x" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">1</span> Aceptar doble subsunción si la CSJ la validó</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="c" value="y" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">2</span> Atacar por legalidad y <em>ne bis in idem</em> material</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="c" value="z" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">3</span> Negociar desistimiento de una vía</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="bc">Retroalimentación</button>
+              </div>
+              <div id="fc" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <p><a href="04-contexto.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    (function () {
+      var shell = document.getElementById('exploreL4');
+      if (!shell) return;
+      var tabs = shell.querySelectorAll('.explore-rail [role="tab"]');
+      var panels = {
+        a: document.getElementById('panel-l4-a'),
+        b: document.getElementById('panel-l4-b'),
+        c: document.getElementById('panel-l4-c')
+      };
+      function show(key) {
+        Object.keys(panels).forEach(function (k) {
+          var p = panels[k];
+          if (!p) return;
+          var on = k === key;
+          p.hidden = !on;
+          p.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+        tabs.forEach(function (t) {
+          t.setAttribute('aria-selected', t.getAttribute('data-explore-target') === key ? 'true' : 'false');
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          show(t.getAttribute('data-explore-target'));
+        });
+      });
+    })();
+
+    document.getElementById('ba').onclick = function () {
+      var v = document.querySelector('input[name="a"]:checked');
+      var el = document.getElementById('fa');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione.'; return; }
+      el.className = 'feedback show ok';
+      el.textContent = v.value === 'z'
+        ? 'Prudente: ante divergencia de líneas CSJ, la estrategia subsidiaria reduce riesgo de rechazo liminar de la pretensión.'
+        : 'Una sola causal puede ser coherente si su curso adoptó línea clara; si no, expone a error de pretensión procesal.';
+    };
+    document.getElementById('bb').onclick = function () {
+      var v = document.querySelector('input[name="b"]:checked');
+      var el = document.getElementById('fb');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione.'; return; }
+      el.className = 'feedback show ok';
+      el.textContent =
+        v.value === 'y'
+          ? 'Conservador y alineado al temario: jurisprudencia mayoritaria en culpa; en dolo el riesgo de rechazo es alto.'
+          : v.value === 'z'
+            ? 'Táctica fina: fundar daño gravísimo y necesidad de pena estatal antes de pedir exención.'
+            : 'Innovador: requiere armar precedentes favorables y control de constitucionalidad; litigio de alto impacto.';
+    };
+    document.getElementById('bc').onclick = function () {
+      var v = document.querySelector('input[name="c"]:checked');
+      var el = document.getElementById('fc');
+      if (!v) { el.className = 'feedback show no'; el.textContent = 'Seleccione.'; return; }
+      el.className = 'feedback show ok';
+      el.textContent =
+        v.value === 'y'
+          ? 'Línea garantista ortodoxa del temario: articula legalidad estricta e identidad sustancial del hecho.'
+          : v.value === 'x'
+            ? 'Deferencia a CSJ: útil si la sala consolidó criterio; puede coexistir con reserva para casación.'
+            : 'La negociación puede ser real en ciertos sistemas; documente límites legales y de víctimas.';
+    };
+  </script>
+</body>
+</html>

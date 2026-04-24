@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2 — Ejercicios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L2</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html" class="active">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L2 — Elemento 7 — Ejercicios</span>
+    <h1>Ejercicios con modelo</h1>
+    <p class="lead">Seis ítems sobre teleología, arts. 5–6 C.P. y dosimetría.</p>
+
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>1.</strong> Enumere tres funciones de la pena según art. 6 C.P.</p>
+      <button type="button" class="btn" data-m="m1">Ver modelo</button>
+      <div id="m1" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>2.</strong> Diferencie proporcionalidad abstracta y concreta en una línea cada una.</p>
+      <button type="button" class="btn" data-m="m2">Ver modelo</button>
+      <div id="m2" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>3.</strong> ¿Qué papel tiene el art. 2 C.P. en la dosimetría?</p>
+      <button type="button" class="btn" data-m="m3">Ver modelo</button>
+      <div id="m3" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>4.</strong> Defina prescindencia penal en términos de política criminal.</p>
+      <button type="button" class="btn" data-m="m4">Ver modelo</button>
+      <div id="m4" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>5.</strong> Indique dos vicios motivacionales que expongan la pena a revocatoria.</p>
+      <button type="button" class="btn" data-m="m5">Ver modelo</button>
+      <div id="m5" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>6.</strong> Relacione art. 5 C.P. con estándar de dignidad humana (L1).</p>
+      <button type="button" class="btn" data-m="m6">Ver modelo</button>
+      <div id="m6" class="feedback"></div>
+    </section>
+
+    <blockquote class="src"><strong>Fuentes:</strong> C.P. arts. 2, 5, 6; Bernal, Cap. 4.</blockquote>
+    <p><a href="08-quiz.html" class="btn">Siguiente: Quiz →</a></p>
+  </main>
+  <script>
+    var t = {
+      m1: 'Modelo: prevención general positiva; prevención general negativa; prevención especial (inhibición y, cuando corresponda, tratamiento orientado a la resocialización).',
+      m2: 'Modelo: abstracta — adecuación del tipo y marco legal a la gravedad media del delito; concreta — adecuación de la pena impuesta al hecho y autor concretos.',
+      m3: 'Modelo: orienta la interpretación del sistema punitivo hacia protección de bienes jurídicos, DDHH y eficacia racional, sirviendo de parámetro para revisar desproporciones.',
+      m4: 'Modelo: el derecho penal debe ser última ratio: solo intervenir cuando la protección del bien jurídico no puede lograrse razonablemente con medios menos gravosos.',
+      m5: 'Modelo: omisión de análisis de circunstancias alegadas y probadas; contradicción interna entre hechos calificados y pena impuesta; uso de frases estereotipadas sin conexión probatoria.',
+      m6: 'Modelo: proporcionalidad y resocialización del art. 5 expresan humanización compatible con la dignidad humana como límite a la crueldad y al trato degradante.'
+    };
+    document.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-m');
+        var el = document.getElementById(id);
+        el.className = 'feedback show ok';
+        el.textContent = t[id];
+      };
+    });
+  </script>
+</body>
+</html>

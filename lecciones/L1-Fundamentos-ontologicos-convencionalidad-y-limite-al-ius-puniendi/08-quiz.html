@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L1 — Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L1</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html" class="active">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">Elemento 8 — Quiz</span>
+    <h1>Evaluación L1: principios rectores y bloque</h1>
+    <p class="sub">12 preguntas. Al enviar verá puntuación y retroalimentación por ítem fallado.</p>
+    <p class="lead">
+      Cada pregunta tiene una sola respuesta correcta. El quiz está alineado a la Lección 1 (Bernal, Cap. 4, pp. 251–418) y a los elementos previos del curso.
+    </p>
+
+    <form id="quiz">
+      <section class="card" data-q="0">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>1.</strong> El bloque de constitucionalidad <em>lato sensu</em> se distingue porque:</p>
+        <label class="opt"><input type="radio" name="q0" value="a" /> A) Solo incluye la Constitución Política.</label>
+        <label class="opt"><input type="radio" name="q0" value="b" /> B) Integra un conjunto amplio de fuentes que informan la interpretación conforme del ordenamiento.</label>
+        <label class="opt"><input type="radio" name="q0" value="c" /> C) Excluye tratados internacionales ratificados.</label>
+      </section>
+      <section class="card" data-q="1">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>2.</strong> <em>Lex praevia</em> se asocia principalmente con:</p>
+        <label class="opt"><input type="radio" name="q1" value="a" /> A) Interpretación restrictiva del tipo.</label>
+        <label class="opt"><input type="radio" name="q1" value="b" /> B) Irretroactividad de la ley penal en perjuicio del imputado y predictibilidad.</label>
+        <label class="opt"><input type="radio" name="q1" value="c" /> C) Claridad absoluta del lenguaje del juez.</label>
+      </section>
+      <section class="card" data-q="2">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>3.</strong> En la línea de C-225/95, los tratados sobre DDHH ratificados cumplen rol relevante como:</p>
+        <label class="opt"><input type="radio" name="q2" value="a" /> A) Fuentes integrantes del parámetro interpretativo del bloque, según el sistema de fuentes.</label>
+        <label class="opt"><input type="radio" name="q2" value="b" /> B) Normas siempre superiores al código penal sin más.</label>
+        <label class="opt"><input type="radio" name="q2" value="c" /> C) Opinión consultiva sin efectos en juzgamiento.</label>
+      </section>
+      <section class="card" data-q="3">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>4.</strong> <em>Lex stricta</em> exige:</p>
+        <label class="opt"><input type="radio" name="q3" value="a" /> A) Interpretación restrictiva en favor del imputado y límites severos a analogías que agraven.</label>
+        <label class="opt"><input type="radio" name="q3" value="b" /> B) Que el juez elija la pena sin reglas.</label>
+        <label class="opt"><input type="radio" name="q3" value="c" /> C) Solo aplicar costumbre penal.</label>
+      </section>
+      <section class="card" data-q="4">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>5.</strong> La dignidad humana en el derecho penal cumple función:</p>
+        <label class="opt"><input type="radio" name="q4" value="a" /> A) Meramente declarativa sin incidencia en la pena.</label>
+        <label class="opt"><input type="radio" name="q4" value="b" /> B) Teleológica: humanización y proporcionalidad de la intervención punitiva.</label>
+        <label class="opt"><input type="radio" name="q4" value="c" /> C) Excluir el debido proceso.</label>
+      </section>
+      <section class="card" data-q="5">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>6.</strong> La analogía <em>in malam partem</em>:</p>
+        <label class="opt"><input type="radio" name="q5" value="a" /> A) Está vedada en el sistema de legalidad estricta.</label>
+        <label class="opt"><input type="radio" name="q5" value="b" /> B) Es el criterio preferente del juez penal.</label>
+        <label class="opt"><input type="radio" name="q5" value="c" /> C) Solo aplica a multas administrativas.</label>
+      </section>
+      <section class="card" data-q="6">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>7.</strong> C-582/99 es especialmente útil para argumentar:</p>
+        <label class="opt"><input type="radio" name="q6" value="a" /> A) Garantías del imputado y estándares de debido proceso en el proceso penal.</label>
+        <label class="opt"><input type="radio" name="q6" value="b" /> B) Impuestos municipales.</label>
+        <label class="opt"><input type="radio" name="q6" value="c" /> C) Competencia civil exclusivamente.</label>
+      </section>
+      <section class="card" data-q="7">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>8.</strong> Tras la línea de C-146/21, las sentencias de la Corte IDH:</p>
+        <label class="opt"><input type="radio" name="q7" value="a" /> A) Sirven como criterios hermenéuticos al interpretar el bloque, sin automatizar la inaplicación de la ley interna.</label>
+        <label class="opt"><input type="radio" name="q7" value="b" /> B) Obligan siempre a inaplicar cualquier norma interna sin análisis.</label>
+        <label class="opt"><input type="radio" name="q7" value="c" /> C) Carecen de relevancia para el penalista.</label>
+      </section>
+      <section class="card" data-q="8">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>9.</strong> La claridad y predeterminación del contenido del tipo se vinculan sobre todo con:</p>
+        <label class="opt"><input type="radio" name="q8" value="a" /> A) <em>Lex certa</em>.</label>
+        <label class="opt"><input type="radio" name="q8" value="b" /> B) <em>Lex stricta</em> únicamente.</label>
+        <label class="opt"><input type="radio" name="q8" value="c" /> C) Costumbre mercantil.</label>
+      </section>
+      <section class="card" data-q="9">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>10.</strong> El bloque <em>stricto sensu</em> refuerza:</p>
+        <label class="opt"><input type="radio" name="q9" value="a" /> A) La supremacía del núcleo constitucional y mecanismos de control frente a normas incompatibles.</label>
+        <label class="opt"><input type="radio" name="q9" value="b" /> B) La exclusión total de tratados.</label>
+        <label class="opt"><input type="radio" name="q9" value="c" /> C) La discrecionalidad ilimitada del fiscal.</label>
+      </section>
+      <section class="card" data-q="10">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>11.</strong> Una expansión judicial del verbo típico que agrava al imputado sin base legal clara vulnera prioritariamente:</p>
+        <label class="opt"><input type="radio" name="q10" value="a" /> A) Solo el principio de inocencia, nunca la legalidad.</label>
+        <label class="opt"><input type="radio" name="q10" value="b" /> B) <em>Lex stricta</em> y, en conexión, <em>lex certa</em> y legalidad material.</label>
+        <label class="opt"><input type="radio" name="q10" value="c" /> C) Únicamente la caducidad.</label>
+      </section>
+      <section class="card" data-q="11">
+        <p style="font-size:0.92rem;margin:0 0 0.5rem"><strong>12.</strong> En la secuencia de razonamiento constitucional penal del curso, el primer paso es:</p>
+        <label class="opt"><input type="radio" name="q11" value="a" /> A) Identificar el remedio procesal sin más.</label>
+        <label class="opt"><input type="radio" name="q11" value="b" /> B) Identificar qué derecho fundamental o principio rector está en juego.</label>
+        <label class="opt"><input type="radio" name="q11" value="c" /> C) Pedir conciliación fiscal.</label>
+      </section>
+
+      <button type="submit" class="btn">Enviar y ver resultados</button>
+    </form>
+
+    <section class="card" id="resultBlock" style="display:none">
+      <h2 class="sec">Resultado</h2>
+      <p id="scoreText" style="font-size:0.95rem;margin:0 0 0.5rem"></p>
+      <div class="score-bar"><span id="scoreFill"></span></div>
+      <div id="perQ" style="font-size:0.86rem;margin-top:0.75rem;color:var(--muted)"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Temario L1 (Quiz). Bernal, Cap. 4. Sentencias C-225/95, C-582/99, C-146/21.
+    </blockquote>
+    <p><a href="index.html" class="btn secondary">Volver al inicio L1</a></p>
+  </main>
+  <script>
+    var correctas = ['b', 'b', 'a', 'a', 'b', 'a', 'a', 'a', 'a', 'a', 'b', 'b'];
+    var feedback = [
+      { a: 'El bloque lato sensu es más amplio que el solo texto constitucional.', c: 'Los tratados sobre DDHH ratificados forman parte del acervo interpretativo según el sistema de fuentes.' },
+      { a: 'Eso corresponde a lex stricta.', c: 'Lex praevia no se reduce al estilo del juez.' },
+      { b: 'No hay superioridad automática sin análisis del sistema de fuentes y del bloque.', c: 'Los tratados incorporados tienen efectos jurídicos relevantes en la interpretación.' },
+      { b: 'La pena está sujeta a reglas legales.', c: 'El derecho penal moderno no se basa en costumbre penal como fuente principal.' },
+      { a: 'La dignidad tiene incidencia directa en proporcionalidad y trato.', c: 'La dignidad fortalece, no excluye, garantías procesales.' },
+      { b: 'Lex stricta impide analogía que agrave.', c: 'La analogía in malam partem es propia del derecho penal sustantivo, no de multas como sustituto.' },
+      { b: 'C-582/99 versa sobre garantías en el proceso penal.', c: 'No es un precedente civil exclusivo.' },
+      { b: 'C-146/21 matiza el papel de la Corte IDH frente a la supremacía constitucional.', c: 'El penalista debe articular bloque y DIH con rigor.' },
+      { b: 'Lex stricta regula el modo de interpretación; la claridad del tipo es núcleo de lex certa.', c: 'Irrelevante para tipicidad penal.' },
+      { b: 'El bloque stricto sensu no excluye tratados del sistema global de fuentes.', c: 'El fiscal actúa bajo legalidad y debido proceso.' },
+      { a: 'La inocencia se articula con legalidad; no son excluyentes.', c: 'La caducidad es institución distinta.' },
+      { a: 'El remedio es el último paso de la secuencia.', c: 'No corresponde al razonamiento constitucional penal del marco L1.' }
+    ];
+
+    document.getElementById('quiz').onsubmit = function (e) {
+      e.preventDefault();
+      var n = correctas.length;
+      var ok = 0;
+      var lines = [];
+      for (var i = 0; i < n; i++) {
+        var sel = document.querySelector('input[name="q' + i + '"]:checked');
+        var v = sel ? sel.value : null;
+        if (v === correctas[i]) {
+          ok++;
+        } else {
+          var fb = feedback[i];
+          var msg = 'Pregunta ' + (i + 1) + ': incorrecta.';
+          if (v && fb && fb[v]) msg += ' ' + fb[v];
+          else if (!v) msg += ' Sin respuesta seleccionada.';
+          lines.push(msg);
+        }
+      }
+      var pct = Math.round((ok / n) * 100);
+      document.getElementById('resultBlock').style.display = 'block';
+      document.getElementById('scoreText').textContent =
+        'Aciertos: ' + ok + ' de ' + n + ' (' + pct + '%). Umbral sugerido para avance: ≥ 75%.';
+      document.getElementById('scoreFill').style.width = pct + '%';
+      document.getElementById('perQ').innerHTML =
+        lines.length === 0
+          ? '<span style="color:var(--ok)">Todas las respuestas correctas.</span>'
+          : '<strong>Retroalimentación por ítem fallado:</strong><br/>' + lines.join('<br/><br/>');
+      document.getElementById('resultBlock').scrollIntoView({ behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>

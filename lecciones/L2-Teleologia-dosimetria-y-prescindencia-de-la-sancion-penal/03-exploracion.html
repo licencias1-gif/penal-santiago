@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2 — Exploración</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L2</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html" class="active">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L2 — Elemento 3 — Exploración</span>
+    <h1>Dilema: “pena ejemplar” frente a proporcionalidad constitucional</h1>
+
+    <div class="explore-shell" id="exploreL2">
+      <p class="sr-only" id="exploreL2-desc">Use las pestañas para alternar entre la escena interactiva y la tabla de tensiones.</p>
+      <div class="explore-rail" role="tablist" aria-label="Vistas de exploración">
+        <button type="button" role="tab" id="tab-l2-escena" aria-controls="panel-l2-escena" aria-selected="true" data-explore-target="escena">Escena</button>
+        <button type="button" role="tab" id="tab-l2-tabla" aria-controls="panel-l2-tabla" aria-selected="false" data-explore-target="tabla">Tabla de tensiones</button>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l2-escena" aria-labelledby="tab-l2-escena">
+        <section class="card">
+          <h2 class="sec">Microcaso — Postura del sentenciador</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Contexto del dilema">
+              <p class="explore-facts-label">Escenario</p>
+              <p class="sub" style="margin-top:0">Escenario: delito mediático; presión social por penas máximas.</p>
+              <p class="lead" style="margin-bottom:0">
+                El debate enfrenta la <strong>prevención general negativa</strong> entendida como intimidación colectiva frente al mandato de
+                <strong>proporcionalidad</strong> y <strong>dignidad</strong>. La exploración entrena el argumento sin confundir política criminal con
+                arbitrariedad judicial.
+              </p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem" id="l2-postura-label">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="l2-postura-label">
+                <label class="explore-tile">
+                  <input type="radio" name="p" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> Imponer pena cercana al máximo para enviar “mensaje social”.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="p" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> Fijar pena según marco legal, gravedad concreta y motivación estricta de circunstancias.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="p" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> Minimizar siempre la pena sin análisis de gravedad.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="go">Ver retroalimentación</button>
+              </div>
+              <div id="fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l2-tabla" aria-labelledby="tab-l2-tabla" hidden>
+        <section class="card">
+          <h2 class="sec">Tabla de tensiones</h2>
+          <table class="explore-glow">
+            <thead>
+              <tr><th>Argumento populista</th><th>Contrapeso dogmático</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>“La gente pide justicia” como único criterio</td><td>Legalidad y motivación racional (arts. 5 y 6 C.P.; debido proceso)</td></tr>
+              <tr><td>“Hay que castigar para educar a todos”</td><td>Prevención general sin crueldad ni desproporción; función de la pena acotada</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Bernal, Cap. 4; C.P. arts. 2, 5, 6.
+    </blockquote>
+    <p><a href="04-contexto.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    (function () {
+      var shell = document.getElementById('exploreL2');
+      if (!shell) return;
+      var tabs = shell.querySelectorAll('.explore-rail [role="tab"]');
+      var pe = document.getElementById('panel-l2-escena');
+      var pt = document.getElementById('panel-l2-tabla');
+      function show(key) {
+        var escena = key === 'escena';
+        pe.hidden = !escena;
+        pt.hidden = escena;
+        pe.setAttribute('aria-hidden', escena ? 'false' : 'true');
+        pt.setAttribute('aria-hidden', escena ? 'true' : 'false');
+        tabs.forEach(function (t) {
+          var sel = t.getAttribute('data-explore-target') === key;
+          t.setAttribute('aria-selected', sel ? 'true' : 'false');
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          show(t.getAttribute('data-explore-target'));
+        });
+      });
+    })();
+
+    document.getElementById('go').onclick = function () {
+      var r = document.querySelector('input[name="p"]:checked');
+      var el = document.getElementById('fb');
+      if (!r) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      if (r.value === 'b') {
+        el.className = 'feedback show ok';
+        el.textContent = 'Alineado con proporcionalidad concreta y función constitucional de la pena: el mensaje social no puede sustituir la gravedad probada y el marco legal.';
+      } else if (r.value === 'a') {
+        el.className = 'feedback show no';
+        el.textContent = 'Riesgo de pena ejemplarización incompatible con proporcionalidad: debe fundarse en hecho, tipo y circunstancias, no en presión mediática.';
+      } else {
+        el.className = 'feedback show no';
+        el.textContent = 'La humanización no autoriza minimización automática: también vulnera la racionalidad dosimétrica y la protección del bien jurídico.';
+      }
+    };
+  </script>
+</body>
+</html>

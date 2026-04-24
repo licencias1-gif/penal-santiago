@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L1 — Ejercicios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L1</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html" class="active">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">Elemento 7 — Ejercicios</span>
+    <h1>Ejercicios guiados con justificación modelo</h1>
+    <p class="sub">Introducción breve: seis ítems de distinta dificultad; cada uno incluye respuesta modelo al revelar.</p>
+    <p class="lead">
+      Los ejercicios recorren <strong>definición</strong>, <strong>distinción</strong>, <strong>aplicación</strong> y <strong>síntesis</strong>.
+      Use primero su criterio; luego pulse “Ver modelo” para contrastar con la pauta académica alineada a Bernal, Cap. 4.
+    </p>
+
+    <section class="card">
+      <h2 class="sec">Ej. 1 — Definición operativa</h2>
+      <p style="font-size:0.9rem">En una frase técnica, defina <em>bloque de constitucionalidad lato sensu</em>.</p>
+      <button type="button" class="btn" data-ans="e1">Ver modelo</button>
+      <div id="e1" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Ej. 2 — Contraste</h2>
+      <p style="font-size:0.9rem">Enumere dos diferencias entre <em>lex certa</em> y <em>lex stricta</em>.</p>
+      <button type="button" class="btn" data-ans="e2">Ver modelo</button>
+      <div id="e2" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Ej. 3 — Subsumición breve</h2>
+      <p style="font-size:0.9rem">Un juez amplía el tipo por analogía que agrava. ¿Qué principio o principios invoca usted en defensa y en qué orden?</p>
+      <button type="button" class="btn" data-ans="e3">Ver modelo</button>
+      <div id="e3" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Ej. 4 — Precedentes</h2>
+      <p style="font-size:0.9rem">¿Qué aporta C-225/95 al argumento penal que invoca un tratado de derechos humanos ratificado?</p>
+      <button type="button" class="btn" data-ans="e4">Ver modelo</button>
+      <div id="e4" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Ej. 5 — C-146/21</h2>
+      <p style="font-size:0.9rem">Explique en dos líneas por qué C-146/21 no autoriza al abogado penal a pedir “inaplicación automática” de la ley interna citando solo un fallo de la Corte IDH.</p>
+      <button type="button" class="btn" data-ans="e5">Ver modelo</button>
+      <div id="e5" class="feedback"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Ej. 6 — Síntesis</h2>
+      <p style="font-size:0.9rem">Elabore un esquema de cuatro pasos del razonamiento constitucional penal (del principio a la vía procesal).</p>
+      <button type="button" class="btn" data-ans="e6">Ver modelo</button>
+      <div id="e6" class="feedback"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Temario L1 (Ejercicios). Bernal, Cap. 4 (pp. 251–418).
+    </blockquote>
+    <p><a href="08-quiz.html" class="btn">Siguiente: Quiz →</a></p>
+  </main>
+  <script>
+    var modelos = {
+      e1:
+        'Modelo: Conjunto amplio de fuentes y estándares (Constitución, leyes estatutarias, tratados incorporados y, según el caso, desarrollo jurisprudencial) que informan la interpretación conforme de las normas penales y procesales.',
+      e2:
+        'Modelo: (1) Lex certa se refiere a la claridad y predeterminación del contenido del tipo y de la pena; lex stricta al modo de interpretación restrictivo en favor del imputado. (2) Lex certa evita tipos imprevisibles; lex stricta limita la analogía y la expansión judicial del significado del tipo.',
+      e3:
+        'Modelo: Primero lex stricta (prohibición de analogía in malam partem y exigencia de interpretación restrictiva); en segundo término lex certa (si la expansión vacía el núcleo previsible del tipo); articulación con principio de legalidad y, según el caso, debido proceso por imputación indeterminada.',
+      e4:
+        'Modelo: C-225/95 consolida la integración de los tratados sobre DDHH en el parámetro interpretativo del ordenamiento, lo que fortalece argumentos de interpretación conforme o de control cuando una norma o práctica penal colisiona con estándares convencionales incorporados.',
+      e5:
+        'Modelo: La Corte precisa el papel de la jurisprudencia IDH como criterio hermenéutico dentro del bloque y la supremacía constitucional, sin convertir al juez en instancia de “control de convencionalidad” abstracto; por ello la inaplicación exige encadenar colisión, estándar del bloque interno y remedio procesal idóneo.',
+      e6:
+        'Modelo: (1) Identificar derecho o principio afectado; (2) fijar estándar constitucional/convencional aplicable; (3) demostrar colisión con norma, interpretación o acto; (4) solicitar remedio procesal competente (interpretación conforme, excepción, recurso, control abstracto).'
+    };
+    document.querySelectorAll('[data-ans]').forEach(function (btn) {
+      btn.onclick = function () {
+        var id = btn.getAttribute('data-ans');
+        var el = document.getElementById(id);
+        el.className = 'feedback show ok';
+        el.textContent = modelos[id];
+      };
+    });
+  </script>
+</body>
+</html>

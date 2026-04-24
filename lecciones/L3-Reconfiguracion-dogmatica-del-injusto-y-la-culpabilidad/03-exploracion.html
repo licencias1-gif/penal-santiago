@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L3 — Exploración</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L3</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html" class="active">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L3 — Elemento 3 — Exploración</span>
+    <h1>Dilema: culpabilidad “estricta” frente a políticas de prevención</h1>
+
+    <div class="explore-shell" id="exploreL3">
+      <p class="sr-only">Exploración en dos vistas: escena con fichas y tabla argumentativa.</p>
+      <div class="explore-rail" role="tablist" aria-label="Vistas de exploración">
+        <button type="button" role="tab" id="tab-l3-escena" aria-controls="panel-l3-escena" aria-selected="true" data-explore-target="escena">Escena</button>
+        <button type="button" role="tab" id="tab-l3-tabla" aria-controls="panel-l3-tabla" aria-selected="false" data-explore-target="tabla">Tabla argumentativa</button>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l3-escena" aria-labelledby="tab-l3-escena">
+        <section class="card">
+          <h2 class="sec">Contraste de posturas</h2>
+          <div class="explore-split">
+            <aside class="explore-facts" aria-label="Marco del dilema">
+              <p class="explore-facts-label">Marco</p>
+              <p class="lead" style="margin:0">
+                Algunos discursos políticos presionan por <strong>responsabilidad objetiva</strong> o inversión de la carga probatoria en ciertos delitos.
+                La exploración contrasta esas propuestas con el principio de culpabilidad y el derecho de defensa.
+              </p>
+            </aside>
+            <div>
+              <p class="explore-facts-label" style="margin-bottom:0.35rem" id="l3-linea-label">Elija una primera línea</p>
+              <div class="explore-tiles" role="radiogroup" aria-labelledby="l3-linea-label">
+                <label class="explore-tile">
+                  <input type="radio" name="d" value="a" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">A</span> La prevención justifica atenuar exigencias de culpabilidad en delitos graves.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="d" value="b" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">B</span> La culpabilidad es límite constitucional: solo penas sobre base de imputación personal fundada.</span>
+                </label>
+                <label class="explore-tile">
+                  <input type="radio" name="d" value="c" />
+                  <span class="explore-tile-body"><span class="explore-tile-kicker">C</span> La tipicidad basta; la culpabilidad es formalidad accesoria.</span>
+                </label>
+              </div>
+              <div class="explore-action">
+                <button type="button" class="btn" id="go">Retroalimentación</button>
+              </div>
+              <div id="fb" class="feedback" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="explore-panel" role="tabpanel" id="panel-l3-tabla" aria-labelledby="tab-l3-tabla" hidden>
+        <section class="card">
+          <h2 class="sec">Tabla argumentativa</h2>
+          <table class="explore-glow">
+            <thead>
+              <tr><th>Postura preventiva extrema</th><th>Contrapeso garantista</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>“El fin de disuadir autoriza presumir dolo”</td><td>Inocencia y carga de la prueba; motivación racional</td></tr>
+              <tr><td>“Basta el daño para castigar”</td><td>Tipicidad, antijuridicidad y culpabilidad como filtros acumulativos</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <blockquote class="src"><strong>Fuentes:</strong> Bernal, Cap. 4; Constitución (debido proceso, inocencia).</blockquote>
+    <p><a href="04-contexto.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    (function () {
+      var shell = document.getElementById('exploreL3');
+      if (!shell) return;
+      var tabs = shell.querySelectorAll('.explore-rail [role="tab"]');
+      var pe = document.getElementById('panel-l3-escena');
+      var pt = document.getElementById('panel-l3-tabla');
+      function show(key) {
+        var escena = key === 'escena';
+        pe.hidden = !escena;
+        pt.hidden = escena;
+        pe.setAttribute('aria-hidden', escena ? 'false' : 'true');
+        pt.setAttribute('aria-hidden', escena ? 'true' : 'false');
+        tabs.forEach(function (t) {
+          t.setAttribute('aria-selected', t.getAttribute('data-explore-target') === key ? 'true' : 'false');
+        });
+      }
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          show(t.getAttribute('data-explore-target'));
+        });
+      });
+    })();
+
+    document.getElementById('go').onclick = function () {
+      var r = document.querySelector('input[name="d"]:checked');
+      var el = document.getElementById('fb');
+      if (!r) { el.className = 'feedback show no'; el.textContent = 'Seleccione una opción.'; return; }
+      if (r.value === 'b') {
+        el.className = 'feedback show ok';
+        el.textContent = 'Coherente con el sistema colombiano y la lectura garantista del Cap. 4: la culpabilidad ancla el reproche en la persona del imputado.';
+      } else if (r.value === 'a') {
+        el.className = 'feedback show no';
+        el.textContent = 'Arriesgado: erosionar culpabilidad por gravedad del delito choca con principio de inocencia y tipicidad estricta.';
+      } else {
+        el.className = 'feedback show no';
+        el.textContent = 'Incorrecto: sin culpabilidad no hay fundamento para pena en el esquema clásico adoptado en el curso.';
+      }
+    };
+  </script>
+</body>
+</html>

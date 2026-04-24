@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L4 — Ejercicios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L4</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html" class="active">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L4 — Elemento 7 — Ejercicios</span>
+    <h1>Ejercicios</h1>
+
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>1.</strong> Redacte una oración que explique por qué la elección entre causal 4 y 6 no es indiferente para la Fiscalía.</p>
+      <button type="button" class="btn" data-m="m1">Modelo</button>
+      <div id="m1" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>2.</strong> Enumere tres pruebas que apoyen art. 34 C.P.</p>
+      <button type="button" class="btn" data-m="m2">Modelo</button>
+      <div id="m2" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>3.</strong> ¿Qué argumento de legalidad estricta puede usarse contra doble subsunción CP + art. 7 ER?</p>
+      <button type="button" class="btn" data-m="m3">Modelo</button>
+      <div id="m3" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>4.</strong> Diferencie <em>ne bis in idem</em> interno e internacional en una línea.</p>
+      <button type="button" class="btn" data-m="m4">Modelo</button>
+      <div id="m4" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>5.</strong> Mencione dos sentencias CSJ citadas en el temario sobre lesividad.</p>
+      <button type="button" class="btn" data-m="m5">Modelo</button>
+      <div id="m5" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>6.</strong> ¿Qué papel tiene Guzmán Díaz (2021) según bibliografía del temario?</p>
+      <button type="button" class="btn" data-m="m6">Modelo</button>
+      <div id="m6" class="feedback"></div>
+    </section>
+
+    <blockquote class="src"><strong>Fuentes:</strong> Temario Propuesta R.</blockquote>
+    <p><a href="08-quiz.html" class="btn">Quiz →</a></p>
+  </main>
+  <script>
+    var t = {
+      m1: 'Modelo: según la línea jurisprudencial, la causal mal invocada puede llevar a rechazo de la pretensión o a impedir el archivo que la defensa busca, por lo que la cualificación dogmática guía el trámite.',
+      m2: 'Modelo: informes médicos o psiquiátricos; declaraciones sobre impacto familiar; pericia sobre entidad del daño y su carácter gravísimo; prueba del nexo con el hecho punible.',
+      m3: 'Modelo: riesgo de vulnerar lex praevia y lex scripta al ensanchar el tipo mediante subsumición acumulativa sin respaldo analógico legítimo; posible violación de ne bis in idem material.',
+      m4: 'Modelo: el interno evita doble sanción por el mismo hecho en el orden colombiano; el internacional atiende a identidad con procesos en otros Estados o tribunales según tratados.',
+      m5: 'Modelo: el temario menciona, entre otras, Rad. 21064 y Rad. 47862 como contraste de líneas sobre lesividad.',
+      m6: 'Modelo: ubicación sistemática de la ausencia de lesividad de la conducta — debate atipicidad vs. antijuridicidad material.'
+    };
+    document.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-m');
+        var el = document.getElementById(id);
+        el.className = 'feedback show ok';
+        el.textContent = t[id];
+      };
+    });
+  </script>
+</body>
+</html>

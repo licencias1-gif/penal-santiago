@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2 — Aplicación</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L2</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html" class="active">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L2 — Elemento 5 — Aplicación</span>
+    <h1>Clínica: alegatos de dosimetría en segunda instancia</h1>
+    <p class="sub">Plantilla para impugnar la pena por desproporción o déficit de motivación.</p>
+    <p class="lead">
+      Estructura su escrito en cuatro bloques: <strong>hechos probados relevantes</strong> para la gravedad; <strong>marco legal aplicable</strong>
+      (mínimos, concursos, circunstancias); <strong>crítica a la lógica del sentenciador</strong> (saltos, omisiones, trato desigual de pruebas);
+      <strong>petitorio concreto</strong> (subir, bajar o remitir para nueva dosimetría).
+    </p>
+
+    <section class="card">
+      <h2 class="sec">Tesis modelo (adaptar)</h2>
+      <ol style="font-size:0.9rem;line-height:1.5">
+        <li>La sentencia no explicitó la ponderación entre funciones de la pena del art. 6 C.P. y las circunstancias del arts. 59 y ss.</li>
+        <li>La pena impuesta se ubica en el tercio superior sin justificación suficiente frente a atenuantes acreditadas (enumerar).</li>
+        <li>Existe alternativa menos gravosa igualmente idónea para la prevención especial (fundamentar).</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">Campos de trabajo</h2>
+      <textarea id="t1" placeholder="Circunstancias atenuantes y prueba asociada"></textarea>
+      <textarea id="t2" style="margin-top:0.5rem" placeholder="Crítica específica a la motivación de la pena"></textarea>
+      <button type="button" class="btn" id="chk">Completitud mínima</button>
+      <div id="fb" class="feedback"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> C.P. arts. 2, 5, 6; Bernal, Cap. 4.
+    </blockquote>
+    <p><a href="06-prospectiva.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    document.getElementById('chk').onclick = function () {
+      var el = document.getElementById('fb');
+      if (document.getElementById('t1').value.trim().length < 30 || document.getElementById('t2').value.trim().length < 30) {
+        el.className = 'feedback show no';
+        el.textContent = 'Amplíe ambos campos: la apelación dosimétrica exige hechos y crítica jurídica concretos.';
+        return;
+      }
+      el.className = 'feedback show ok';
+      el.textContent = 'Base suficiente para integrar párrafos en el escrito de apelación.';
+    };
+  </script>
+</body>
+</html>

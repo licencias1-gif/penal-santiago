@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L1 — Aplicación</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L1</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html" class="active">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">Elemento 5 — Aplicación</span>
+    <h1>Clínica: recurso extraordinario y error jurídico en clave constitucional</h1>
+    <p class="sub">Introducción breve: traducir principios rectores y legalidad en un esquema de impugnación estructurado.</p>
+    <p class="lead">
+      Este elemento aplica la teoría de la Lección 1 a un <strong>supuesto de segunda instancia</strong> (o casación, según el proceso): se busca
+      demostrar <em>error jurídico</em> en la interpretación del tipo o en la ponderación de derechos fundamentales, articulando bloque de
+      constitucionalidad y estándar de legalidad estricta. La plantilla siguiente está redactada en tono forense definitivo, lista para adaptar a hechos probados.
+    </p>
+
+    <section class="card">
+      <h2 class="sec">1. Hechos relevantes y decisión impugnada (extracto)</h2>
+      <p style="font-size:0.9rem;margin:0">
+        La sentencia de instancia interpretó extensivamente el verbo típico para incluir conducta <strong>B</strong>, aunque el relato probatorio
+        describe conducta <strong>A</strong>, asimilable solo por vía de “equivalencia social”. No existe norma aclaratoria ni línea unificada
+        vinculante que autorice la equiparación. La defensa sostiene vulneración de <em>lex certa</em> y <em>lex stricta</em>, con proyección al
+        principio de inocencia y al debido proceso.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">2. Tesis jurídicas (numeradas)</h2>
+      <ol style="font-size:0.9rem;margin:0;padding-left:1.2rem;line-height:1.5">
+        <li>La interpretación extensiva del tipo sin soporte legal claro contraviene el mandato de <strong>legalidad estricta</strong> (Constitución Política; desarrollo dogmático en Bernal, Cap. 4, sección de legalidad).</li>
+        <li>La equiparación <strong>A ≈ B</strong> importa <strong>analogía in malam partem</strong> prohibida, al agraviar la situación del imputado sin base textual suficiente.</li>
+        <li>El estándar del <strong>bloque de constitucionalidad</strong> exige interpretación conforme que preserve derechos fundamentales; la sentencia impugnada no explicitó el test de certeza ni el estándar restrictivo aplicable.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">3. Fundamentos en bloque y precedentes (citación de trabajo)</h2>
+      <p style="font-size:0.88rem;margin:0 0 0.5rem">
+        En el escrito definitivo se citará el texto legal pertinente y, si aplica, <strong>C-225/95</strong> (integración del bloque y tratados),
+        <strong>C-582/99</strong> (garantías del imputado) y la precisión sobre el valor hermenéutico de la jurisprudencia interamericana en
+        <strong>C-146/21</strong>, para mostrar que la integración no autoriza saltos interpretativos sin encadenamiento al parámetro interno.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Argumento</th><th>Soporte</th><th>Conclusión parcial</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Certeza del tipo</td><td><em>Lex certa</em>; doctrina de reserva de ley</td><td>La conducta punible debe ser identificable sin rellenar el tipo con criterios extralegales discrecionales</td></tr>
+          <tr><td>Límite interpretativo</td><td><em>Lex stricta</em></td><td>Corresponde la interpretación más favorable al imputado compatible con el texto y la finalidad constitucional de la norma</td></tr>
+          <tr><td>Debido proceso</td><td>Arts. 28 y 29 C.P.; línea C-582/99</td><td>La imputación debe ser precisa y contradictoria; la ampliación del tipo en la sentencia afecta la defensa técnica</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">4. Petitorio</h2>
+      <ul style="font-size:0.9rem;margin:0;padding-left:1.2rem">
+        <li>Revocar la sentencia impugnada en el capítulo de tipicidad objetiva y, subsidiariamente, en la valoración de la intervención sobre libertad si a ello hubiere lugar.</li>
+        <li>Reenviar para nuevo fallo con obligación de motivar bajo estándar de legalidad estricta y bloque de constitucionalidad.</li>
+        <li>Imponer costas conforme a ley.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">5. Campos para adaptación (su caso)</h2>
+      <p style="font-size:0.88rem;color:var(--muted);margin:0 0 0.35rem">Sustituya los marcadores por datos de su expediente.</p>
+      <textarea id="t1" placeholder="Conducta A (descripción fáctica probada)"></textarea>
+      <textarea id="t2" style="margin-top:0.5rem" placeholder="Conducta B (interpretación judicial cuestionada)"></textarea>
+      <button type="button" class="btn" id="chk">Verificar que completó ambos campos</button>
+      <div id="fb" class="feedback"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Temario L1 (Aplicación). Bernal, Cap. 4: principios rectores, bloque, legalidad (pp. 251–418, con énfasis 341–366).
+    </blockquote>
+    <p><a href="06-prospectiva.html" class="btn">Siguiente: Prospectiva →</a></p>
+  </main>
+  <script>
+    document.getElementById('chk').onclick = function () {
+      var a = document.getElementById('t1').value.trim();
+      var b = document.getElementById('t2').value.trim();
+      var el = document.getElementById('fb');
+      if (a.length < 20 || b.length < 20) {
+        el.className = 'feedback show no';
+        el.textContent =
+          'Describa con suficiente detalle ambas conductas (mínimo sugerido: una oración sustantiva cada una) para que el encadenamiento A/B sea revisable en casación.';
+        return;
+      }
+      el.className = 'feedback show ok';
+      el.textContent =
+        'Listo para integrar: inserte estos párrafos en el hecho probatorio y en la sección de subsumición, y cruce cada afirmación con cita a prueba y a norma.';
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L1 — Prospectiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L1</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html" class="active">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">Elemento 6 — Prospectiva</span>
+    <h1>Escenarios futuros y priorización estratégica</h1>
+    <p class="sub">Introducción breve: anticipar reformas, litigiosidad y riesgos de política criminal.</p>
+    <p class="lead">
+      La prospectiva no predice el futuro: ordena <strong>variables</strong> (legislación, jurisprudencia constitucional, estándares internacionales,
+      tecnología) y asigna <strong>probabilidad de ocurrencia</strong> y <strong>impacto en el litigio penal</strong>. La tabla combina escenarios
+      con mitigaciones concretas para abogacía y academia.
+    </p>
+
+    <section class="card">
+      <h2 class="sec">1. Matriz de escenarios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Escenario</th>
+            <th>Disparadores</th>
+            <th>Efecto probable en penal</th>
+            <th>Prioridad táctica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Endurecimiento punitivo legislativo</td>
+            <td>Crisis de seguridad, presión electoral</td>
+            <td>Tipos ampliados, penas máximas alzas; más tensiones con <em>lex certa</em></td>
+            <td>Alta: preparar líneas de inconstitucionalidad y defensa de reserva de ley</td>
+          </tr>
+          <tr>
+            <td>Mayor control constitucional concentrado</td>
+            <td>Fallos de inexequibilidad en materia penal o procesal</td>
+            <td>Reordenamiento de tipos o pruebas; inseguridad transitoria</td>
+            <td>Media-alta: monitoreo de relatoría y ajuste de escritos modelo</td>
+          </tr>
+          <tr>
+            <td>Integración hermenéutica de DIH sin nueva codificación</td>
+            <td>Sentencias IDH + debates académicos</td>
+            <td>Más argumentos de interpretación conforme en sala penal</td>
+            <td>Media: dominar C-225/95 y límites de C-146/21</td>
+          </tr>
+          <tr>
+            <td>Criminalización de conductas digitales</td>
+            <td>Nuevas tecnologías, tipos “omnibus”</td>
+            <td>Conflictos de tipicidad, prueba electrónica, proporcionalidad</td>
+            <td>Alta: pericia y tipicidad estricta</td>
+          </tr>
+          <tr>
+            <td>Desjudicialización o negociación reforzada</td>
+            <td>Sobrecarga judicial, políticas restaurativas</td>
+            <td>Cambio de incentivos; menos litigio en algunos delitos menores</td>
+            <td>Baja-media según especialidad; seguir desarrollo legislativo</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">2. Riesgos y mitigaciones</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Riesgo institucional</h3>
+          <ul style="font-size:0.88rem;margin:0;padding-left:1.2rem">
+            <li><strong>Inflación tipológica</strong> sin política criminal clara → mitigar con estudios de impacto y control abstracto.</li>
+            <li><strong>Fragmentación jurisprudencial</strong> entre salas → mitigar con recursos de unificación y citas sistemáticas.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Riesgo para el litigante</h3>
+          <ul style="font-size:0.88rem;margin:0;padding-left:1.2rem">
+            <li><strong>Sobrerreacción defensiva</strong> (demasiados motivos dilatorios) → priorizar ataques constitucionalmente densos.</li>
+            <li><strong>Subutilización del bloque</strong> → formación continua en tratados y estándar C-146/21.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">3. Priorización (autoevaluación)</h2>
+      <p style="font-size:0.9rem">Ordene mentalmente: ¿qué escenario afecta más su práctica en los próximos 24 meses?</p>
+      <button type="button" class="btn secondary" id="p1">Endurecimiento legislativo</button>
+      <button type="button" class="btn secondary" id="p2">Digital / prueba electrónica</button>
+      <div id="pfb" class="feedback"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Temario L1 (Prospectiva). Bernal, Cap. 4 (visión sistémica de principios y límites al ius puniendi, pp. 251–418).
+    </blockquote>
+    <p><a href="07-ejercicios.html" class="btn">Siguiente: Ejercicios →</a></p>
+  </main>
+  <script>
+    document.getElementById('p1').onclick = function () {
+      var el = document.getElementById('pfb');
+      el.className = 'feedback show ok';
+      el.textContent =
+        'Prioridad sugerida: actualizar plantillas de inconstitucionalidad, mapa de tipos nuevos y línea de lex certa; coordinar con política de víctimas para no perder el núcleo garantista.';
+    };
+    document.getElementById('p2').onclick = function () {
+      var el = document.getElementById('pfb');
+      el.className = 'feedback show ok';
+      el.textContent =
+        'Prioridad sugerida: formación en cadena de custodia y estándar probatorio; revisar tipicidad de conductos en medios digitales y proporcionalidad de medidas.';
+    };
+  </script>
+</body>
+</html>

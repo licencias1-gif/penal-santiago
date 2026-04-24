@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L3 — Ejercicios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L3</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html" class="active">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L3 — Elemento 7 — Ejercicios</span>
+    <h1>Ejercicios con modelo</h1>
+
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>1.</strong> Defina injusto penal en el esquema de cuatro pasos.</p>
+      <button type="button" class="btn" data-m="m1">Modelo</button>
+      <div id="m1" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>2.</strong> ¿Qué relación hay entre antijuridicidad y culpabilidad?</p>
+      <button type="button" class="btn" data-m="m2">Modelo</button>
+      <div id="m2" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>3.</strong> Explique por qué la gravedad del resultado no prueba automáticamente el dolo.</p>
+      <button type="button" class="btn" data-m="m3">Modelo</button>
+      <div id="m3" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>4.</strong> Diferencie error de tipo y error de prohibición en una línea cada uno.</p>
+      <button type="button" class="btn" data-m="m4">Modelo</button>
+      <div id="m4" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>5.</strong> ¿Qué efecto tiene una causa de justificación plena sobre la cadena del injusto?</p>
+      <button type="button" class="btn" data-m="m5">Modelo</button>
+      <div id="m5" class="feedback"></div>
+    </section>
+    <section class="card">
+      <p style="font-size:0.9rem"><strong>6.</strong> Vincule principio de culpabilidad con principio de dignidad humana (L1).</p>
+      <button type="button" class="btn" data-m="m6">Modelo</button>
+      <div id="m6" class="feedback"></div>
+    </section>
+
+    <blockquote class="src"><strong>Fuentes:</strong> Bernal, Cap. 4.</blockquote>
+    <p><a href="08-quiz.html" class="btn">Quiz →</a></p>
+  </main>
+  <script>
+    var t = {
+      m1: 'Modelo: conducta humana relevante → tipicidad → antijuridicidad (injusto objetivo) → culpabilidad (injusto subjetivo / reproche).',
+      m2: 'Modelo: la antijuridicidad juzga la contravención al derecho; la culpabilidad, si ese injusto puede imputarse personalmente al autor con reproche.',
+      m3: 'Modelo: el dolo versa sobre conocimiento y voluntad respecto del injusto; el resultado grave puede existir con culpa o causación atípica sin dolo.',
+      m4: 'Modelo: error de tipo — equivocación sobre hechos que configuran el tipo; error de prohibición — desconocimiento o equivocación sobre la ilicitud del hecho.',
+      m5: 'Modelo: excluye la antijuridicidad (o la neutraliza según la figura), de modo que no se configura injusto típico y antijurídico punible.',
+      m6: 'Modelo: solo penar a quien es culpable respeta la dignidad al no tratar al sujeto como medio de intimidación colectiva sin reproche personal.'
+    };
+    document.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () {
+        var id = b.getAttribute('data-m');
+        var el = document.getElementById(id);
+        el.className = 'feedback show ok';
+        el.textContent = t[id];
+      };
+    });
+  </script>
+</body>
+</html>

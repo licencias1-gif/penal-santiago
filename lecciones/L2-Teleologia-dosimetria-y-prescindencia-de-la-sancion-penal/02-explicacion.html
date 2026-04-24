@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2 — Explicación</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav-lesson">
+    <a href="../index.html">← Lecciones</a>
+    <a href="index.html">Inicio L2</a>
+    <a href="01-conceptos.html">1. Conceptos</a>
+    <a href="02-explicacion.html" class="active">2. Explicación</a>
+    <a href="03-exploracion.html">3. Exploración</a>
+    <a href="04-contexto.html">4. Contexto</a>
+    <a href="05-aplicacion.html">5. Aplicación</a>
+    <a href="06-prospectiva.html">6. Prospectiva</a>
+    <a href="07-ejercicios.html">7. Ejercicios</a>
+    <a href="08-quiz.html">8. Quiz</a>
+  </nav>
+  <main>
+    <span class="pill">L2 — Elemento 2 — Explicación</span>
+    <h1>De la teleología a la sentencia: encadenamiento argumentativo</h1>
+    <p class="sub">Introducción breve: cómo se conectan fines constitucionales, arts. 2–6 C.P. y la motivación de la pena.</p>
+    <p class="lead">
+      El tribunal no “inventa” la teleología: <strong>aplica</strong> un sistema ya comprometido con dignidad humana y proporcionalidad (L1).
+      La explicación dogmática ordena: (1) qué bien jurídico se protege; (2) qué gravedad fáctica y jurídica resulta probada; (3) qué margen legal
+      de pena se abre; (4) cómo las circunstancias y la función preventiva especial ajustan el quantum dentro de ese margen.
+    </p>
+
+    <section class="card">
+      <h2 class="sec">1. Proporcionalidad en dos niveles</h2>
+      <table>
+        <thead>
+          <tr><th>Nivel</th><th>Pregunta</th><th>Control típico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Proporcionalidad <em>abstracta</em></td><td>¿El tipo y el rango legal son compatibles con la gravedad media del delito?</td><td>Control legislativo / inconstitucionalidad</td></tr>
+          <tr><td>Proporcionalidad <em>concreta</em></td><td>¿La pena impuesta se ajusta a este hecho y este autor?</td><td>Apelación, casación por error en el quantum</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">2. Motivación de la pena</h2>
+      <p style="font-size:0.92rem;margin:0">
+        La sentencia debe explicitar por qué se elige un punto dentro del marco legal: concurrencia de circunstancias, atenuantes, agravantes,
+        delitos múltiples, reconocimiento de verdad, reparación. La ausencia de racionalidad dosimétrica expone el fallo a <strong>revocatoria</strong>
+        por arbitrariedad o error judicial.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">3. Prescindencia operativa</h2>
+      <div class="timeline">
+        <div class="timeline-item"><strong>Subsidiariedad</strong><p style="font-size:0.88rem;margin:0.35rem 0 0">Valorar si medidas no penales o penales mínimas satisfacen la finalidad constitucional.</p></div>
+        <div class="timeline-item"><strong>Proporcionalidad</strong><p style="font-size:0.88rem;margin:0.35rem 0 0">Evitar pena que no sea necesaria en sentido estricto para la prevención legítima.</p></div>
+        <div class="timeline-item"><strong>Humanización</strong><p style="font-size:0.88rem;margin:0.35rem 0 0">Coherencia con art. 5 C.P. y estándar de trato digno (L1).</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec">4. Autocomprobación</h2>
+      <p style="font-size:0.9rem">La proporcionalidad concreta se controla principalmente en:</p>
+      <button type="button" class="btn secondary" id="x1">Primera instancia únicamente</button>
+      <button type="button" class="btn secondary" id="x2">Segunda instancia y casación (error en el quantum)</button>
+      <div id="fb" class="feedback"></div>
+    </section>
+
+    <blockquote class="src">
+      <strong>Fuentes:</strong> Bernal, Cap. 4 (principios de sanciones, función y límites de la pena). C.P. arts. 2, 5, 6.
+    </blockquote>
+    <p><a href="03-exploracion.html" class="btn">Siguiente →</a></p>
+  </main>
+  <script>
+    document.getElementById('x1').onclick = function () {
+      document.getElementById('fb').className = 'feedback show no';
+      document.getElementById('fb').textContent = 'La revisión de la pena en concreto es típica de apelación y puede proyectarse a casación si hay error manifiesto o vicio de motivación.';
+    };
+    document.getElementById('x2').onclick = function () {
+      document.getElementById('fb').className = 'feedback show ok';
+      document.getElementById('fb').textContent = 'Correcto: la instancia revisora y la casación pueden corregir el quantum cuando exista error o arbitrariedad dosimétrica.';
+    };
+  </script>
+</body>
+</html>
